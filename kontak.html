@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontak & Usulan SOP | MSOP PKBM ISESW</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* LAYOUT KHUSUS KONTAK & USULAN: KIRI 3 MINI CARD MENYAMPING + KANAN GLASS FORM */
+    .split-contact-layout {
+      max-width: 1240px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.35fr 0.95fr;
+      gap: 2.2rem;
+      align-items: center;
+    }
+
+    /* BAGIAN KIRI: KARTU SEKRETARIAT DENGAN 3 KARTU MINI MENYAMPING */
+    .left-sekretariat-card {
+      background: linear-gradient(145deg, rgba(15, 59, 120, 0.78), rgba(3, 17, 38, 0.92));
+      backdrop-filter: blur(22px);
+      -webkit-backdrop-filter: blur(22px);
+      border: 1.5px solid rgba(56, 189, 248, 0.45);
+      border-top: 5px solid #FACC15;
+      border-radius: 28px;
+      padding: 2.6rem;
+      box-shadow: 0 24px 55px rgba(0, 0, 0, 0.42);
+    }
+
+    .left-sekretariat-card h2 {
+      font-size: 2.1rem;
+      color: #FFFFFF;
+      margin-top: 0.4rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .left-sekretariat-card > p {
+      color: #E0F2FE;
+      font-size: 0.98rem;
+      line-height: 1.65;
+      padding-bottom: 1.8rem;
+      border-bottom: 1px solid rgba(56, 189, 248, 0.25);
+    }
+
+    .mini-cards-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-top: 1.8rem;
+    }
+
+    .mini-card-item {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(56, 189, 248, 0.35);
+      border-bottom: 4px solid #38BDF8;
+      border-radius: 18px;
+      padding: 1.25rem 1rem;
+      transition: all 0.3s ease;
+    }
+
+    .mini-card-item:nth-child(2) {
+      border-bottom-color: #FACC15;
+    }
+
+    .mini-card-item:hover {
+      background: rgba(56, 189, 248, 0.18);
+      transform: translateY(-5px);
+      border-color: #FACC15;
+    }
+
+    .mini-card-item strong {
+      display: block;
+      color: #FACC15;
+      font-size: 0.88rem;
+      margin-bottom: 0.45rem;
+      font-weight: 800;
+    }
+
+    .mini-card-item span {
+      color: #FFFFFF;
+      font-size: 0.86rem;
+      line-height: 1.5;
+      display: block;
+      word-break: break-word;
+    }
+
+    /* BAGIAN KANAN: KARTU FORMULIR GLASSMORPHISM BINGKAI CAHAYA BIRU & KUNING */
+    .right-glass-form-wrapper {
+      padding: 2.5px;
+      border-radius: 30px;
+      background: linear-gradient(135deg, #38BDF8 0%, rgba(255,255,255,0.4) 50%, #FACC15 100%);
+      box-shadow:
+        0 0 35px rgba(56, 189, 248, 0.25),
+        0 0 35px rgba(250, 204, 21, 0.18),
+        0 25px 55px rgba(0, 0, 0, 0.5);
+    }
+
+    .right-glass-form {
+      background: linear-gradient(155deg, rgba(9, 36, 75, 0.88), rgba(3, 17, 38, 0.95));
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border-radius: 28px;
+      padding: 2.5rem;
+    }
+
+    .right-glass-form h3 {
+      font-size: 1.55rem;
+      color: #FFFFFF;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.9rem;
+      border-bottom: 1px solid rgba(56, 189, 248, 0.25);
+    }
+
+    @media (max-width: 1024px) {
+      .split-contact-layout {
+        grid-template-columns: 1fr;
+      }
+      .mini-cards-row {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="logo">
+        <span class="logo-badge">MSOP</span> PKBM ISESW
+      </a>
+      <div class="menu-toggle" id="menuToggle">☰</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="sop.html">Katalog SOP</a></li>
+        <li><a href="alur.html">Tata Kelola & Alur</a></li>
+        <li><a href="kontak.html" class="active">Kontak & Usulan</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="page-banner">
+    <span class="pill-tag">✦ Layanan Informasi & Aspirasi Mutu</span>
+    <h1>Pusat Layanan & <span>Usulan Revisi</span> SOP</h1>
+    <p>Sampaikan pertanyaan seputar prosedur layanan atau ajukan pembaruan dokumen SOP PKBM ISESW.</p>
+  </section>
+
+  <section class="section" style="padding-top: 2rem;">
+    <div class="split-contact-layout">
+      
+      <!-- BAGIAN KIRI: KARTU SEKRETARIAT DENGAN 3 KARTU MINI MENYAMPING -->
+      <div class="left-sekretariat-card">
+        <span class="pill-tag" style="margin-bottom: 0.7rem;">Sekretariat Lembaga</span>
+        <h2>PKBM ISESW Bitung</h2>
+        <p>Hubungi pengelola untuk permintaan salinan dokumen SOP resmi maupun informasi pendaftaran program.</p>
+
+        <div class="mini-cards-row">
+          <div class="mini-card-item">
+            <strong>Alamat Kampus</strong>
+            <span>Jln. Mangga Dua, Kel. Girian Weru Dua, Kec. Girian, Kota Bitung, Sulawesi Utara</span>
+          </div>
+
+          <div class="mini-card-item">
+            <strong>Telepon / WhatsApp</strong>
+            <span>0852-4034-4441 / 0821-9633-2304</span>
+          </div>
+
+          <div class="mini-card-item">
+            <strong>Email Resmi</strong>
+            <span>pkbmisesw@gmail.com</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- BAGIAN KANAN: KARTU FORMULIR GLASSMORPHISM BERBINGKAI CAHAYA BIRU & KUNING -->
+      <div class="right-glass-form-wrapper">
+        <div class="right-glass-form">
+          <h3>Formulir Masukan & Permintaan SOP</h3>
+
+          <form id="formPengajuan">
+            <div class="form-group">
+              <label for="namaPengirim">Nama Lengkap</label>
+              <input type="text" id="namaPengirim" placeholder="Masukkan nama Anda" required>
+            </div>
+
+            <div class="form-group">
+              <label for="peranPengirim">Peran / Status</label>
+              <select id="peranPengirim" required>
+                <option value="">-- Pilih Peran --</option>
+                <option>Tutor / Pengajar</option>
+                <option>Staf Administrasi / Operator</option>
+                <option>Warga Belajar (Paket A/B/C/Kursus)</option>
+                <option>Masyarakat Umum / Mitra</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="topikSop">Topik SOP Terkait</label>
+              <select id="topikSop" required>
+                <option value="">-- Pilih Kategori SOP --</option>
+                <option>SOP-ISESW-01 (PPDB & Kursus)</option>
+                <option>SOP-ISESW-02 (Kegiatan Belajar Mengajar)</option>
+                <option>SOP-ISESW-03 (Evaluasi & Ujian Kesetaraan)</option>
+                <option>SOP-ISESW-04 (Keuangan & BOP)</option>
+                <option>Usulan Pembuatan SOP Baru</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="pesanSop">Detail Pesan / Usulan Perubahan</label>
+              <textarea id="pesanSop" rows="4" placeholder="Tuliskan pertanyaan atau usulan penyempurnaan SOP..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-kuning" style="width: 100%; margin-top: 0.5rem;">
+              Kirim Pengajuan Sekarang
+            </button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-bottom">
+      &copy; 2026 Manajemen SOP PKBM ISESW • Kota Bitung, Sulawesi Utara.
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
