@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Katalog SOP | Aplikasi MSOP</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="logo">
+        <span class="logo-badge">MSOP</span> APLIKASI MSOP
+      </a>
+      <div class="menu-toggle" id="menuToggle">☰</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="sop.html" class="active">Katalog SOP</a></li>
+        <li><a href="alur.html">Tata Kelola & Alur</a></li>
+        <li><a href="kontak.html">Kontak & Usulan</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="page-banner">
+    <span class="pill-tag">✦ Basis Data Prosedur Digital</span>
+    <h1>Katalog <span>Dokumen SOP</span> Terstandar</h1>
+    <p>Cari, filter, dan pelajari panduan standar operasional kerja antar-divisi melalui Aplikasi MSOP.</p>
+  </section>
+
+  <section class="section">
+    <div class="filter-bar">
+      <input type="text" id="searchSop" class="search-input" placeholder="Cari SOP (misal: Rekrutmen, Keuangan, Operasional, IT)...">
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="semua">Semua Kategori</button>
+        <button class="filter-btn" data-filter="operasional">Operasional</button>
+        <button class="filter-btn" data-filter="hrd">SDM & Umum</button>
+        <button class="filter-btn" data-filter="keuangan">Keuangan & IT</button>
+      </div>
+    </div>
+
+    <div class="grid-3">
+      <div class="card sop-item" data-kategori="hrd">
+        <div>
+          <div class="sop-card-top">
+            <span class="badge-kategori">SDM & Umum</span>
+            <span class="kode-sop">SOP-MSOP-01</span>
+          </div>
+          <h3>Rekrutmen & Onboarding Anggota Baru</h3>
+          <p style="margin-bottom: 1.5rem;">Alur seleksi kandidat, verifikasi berkas administrasi, pembuatan akun sistem, hingga orientasi kerja awal.</p>
+        </div>
+        <button class="btn btn-kuning" onclick="bukaModal('rekrutmen')">Lihat Detail Prosedur</button>
+      </div>
+
+      <div class="card sop-item" data-kategori="operasional">
+        <div>
+          <div class="sop-card-top">
+            <span class="badge-kategori">Operasional</span>
+            <span class="kode-sop">SOP-MSOP-02</span>
+          </div>
+          <h3>Pelaksanaan Proyek & Kontrol Kualitas</h3>
+          <p style="margin-bottom: 1.5rem;">Standar perencanaan tugas harian, pelaporan progres pekerjaan, dan pemeriksaan mutu hasil sebelum serah terima.</p>
+        </div>
+        <button class="btn btn-kuning" onclick="bukaModal('operasional')">Lihat Detail Prosedur</button>
+      </div>
+
+      <div class="card sop-item" data-kategori="operasional">
+        <div>
+          <div class="sop-card-top">
+            <span class="badge-kategori">Operasional</span>
+            <span class="kode-sop">SOP-MSOP-03</span>
+          </div>
+          <h3>Penanganan Keluhan & Layanan Pengguna</h3>
+          <p style="margin-bottom: 1.5rem;">Prosedur pencatatan tiket kendala, eskalasi ke tim teknis, batas waktu penyelesaian, dan konfirmasi kepuasan.</p>
+        </div>
+        <button class="btn btn-kuning" onclick="bukaModal('layanan')">Lihat Detail Prosedur</button>
+      </div>
+
+      <div class="card sop-item" data-kategori="keuangan">
+        <div>
+          <div class="sop-card-top">
+            <span class="badge-kategori">Keuangan & IT</span>
+            <span class="kode-sop">SOP-MSOP-04</span>
+          </div>
+          <h3>Pengajuan Anggaran & Klaim Biaya</h3>
+          <p style="margin-bottom: 1.5rem;">Alur pengajuan dana operasional unit, verifikasi bukti transaksi, persetujuan manajer, dan pencairan dana.</p>
+        </div>
+        <button class="btn btn-kuning" onclick="bukaModal('keuangan')">Lihat Detail Prosedur</button>
+      </div>
+
+      <div class="card sop-item" data-kategori="keuangan">
+        <div>
+          <div class="sop-card-top">
+            <span class="badge-kategori">Keuangan & IT</span>
+            <span class="kode-sop">SOP-MSOP-05</span>
+          </div>
+          <h3>Keamanan Data & Hak Akses Aplikasi</h3>
+          <p style="margin-bottom: 1.5rem;">Aturan pembuatan akun pengguna MSOP, pembagian hak akses dokumen rahasia, serta pencadangan data berkala.</p>
+        </div>
+        <button class="btn btn-kuning" onclick="bukaModal('keamanan')">Lihat Detail Prosedur</button>
+      </div>
+
+      <div class="card sop-item" data-kategori="hrd">
+        <div>
+          <div class="sop-card-top">
+            <span class="badge-kategori">SDM & Umum</span>
+            <span class="kode-sop">SOP-MSOP-06</span>
+          </div>
+          <h3>Pengadaan & Pemeliharaan Inventaris</h3>
+          <p style="margin-bottom: 1.5rem;">Prosedur permintaan perangkat kerja, pencatatan nomor aset, dan jadwal pemeliharaan perangkat rutin.</p>
+        </div>
+        <button class="btn btn-kuning" onclick="bukaModal('aset')">Lihat Detail Prosedur</button>
+      </div>
+    </div>
+  </section>
+
+  <div class="modal" id="sopModal">
+    <div class="modal-content">
+      <span class="close-modal" onclick="tutupModal()">&times;</span>
+      <span class="kode-sop" id="modalKode">SOP-MSOP</span>
+      <h2 id="modalJudul" style="color: #FFFFFF; margin-top: 0.7rem;">Judul SOP</h2>
+      <p style="color: #38BDF8; font-size: 0.95rem; margin-top: 0.4rem;">Urutan langkah kerja baku dalam Aplikasi MSOP:</p>
+      <ol class="modal-list" id="modalLangkah"></ol>
+      <button class="btn btn-kuning" onclick="tutupModal()">Tutup Panduan</button>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-bottom">
+      &copy; 2026 Aplikasi MSOP • Sistem Manajemen Standar Operasional Prosedur.
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
