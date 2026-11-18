@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Katalog SOP | MSOP PKBM ISESW</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="logo">
+        <span class="logo-badge">MSOP</span> PKBM ISESW
+      </a>
+      <div class="menu-toggle" id="menuToggle">☰</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="sop.html" class="active">Katalog SOP</a></li>
+        <li><a href="alur.html">Tata Kelola & Alur</a></li>
+        <li><a href="kontak.html">Kontak & Usulan</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="page-banner">
+    <span class="pill-tag">✦ Standar Mutu Terdokumentasi</span>
+    <h1>Katalog <span>Dokumen SOP</span> Resmi</h1>
+    <p>Temukan dan pelajari standar operasional prosedur berdasarkan bidang layanan di lingkungan PKBM ISESW.</p>
+  </section>
+
+  <section class="section">
+    <div class="filter-bar">
+      <input type="text" id="searchSop" class="search-input" placeholder="Cari SOP (misal: PPDB, Dapodik, Ujian, BOP)...">
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="semua">Semua SOP</button>
+        <button class="filter-btn" data-filter="akademik">Akademik</button>
+        <button class="filter-btn" data-filter="administrasi">Administrasi</button>
+        <button class="filter-btn" data-filter="sarpras">Keuangan & Sarpras</button>
+      </div>
+    </div>
+
+    <div class="grid-3">
+      <div class="card sop-item" data-kategori="administrasi">
+        <div>
+          <div class="sop-card-top">
+            <span class="badge-kategori">Administrasi</span>
+            <span class="kode-sop">SOP-ISESW-01</span>
+          </div>
+          <h3>Penerimaan Peserta Didik Baru (PPDB)</h3>
+          <p style="margin-bottom: 1.5rem;">Alur pendaftaran warga belajar Paket A, B, C serta peserta kursus keterampilan hingga penetapan kelas.</p>
+        </div>
+        <button class="btn btn-kuning" onclick="bukaModal('ppdb')">Lihat Detail Prosedur</button>
+      </div>
+
+      <div class="card sop-item" data-kategori="akademik">
+        <div>
+          <div class="sop-card-top">
+            <span class="badge-kategori">Akademik</span>
+            <span class="kode-sop">SOP-ISESW-02</span>
+          </div>
+          <h3>Kegiatan Belajar Mengajar (KBM)</h3>
+          <p style="margin-bottom: 1.5rem;">Standar persiapan perangkat ajar tutor, pelaksanaan tutorial, dan aturan praktik laboratorium komputer.</p>
+        </div>
+        <button class="btn btn-kuning" onclick="bukaModal('kbm')">Lihat Detail Prosedur</button>
+      </div>
+
+      <div class="card sop-item" data-kategori="akademik">
+        <div>
+          <div class="sop-card-top">
+            <span class="badge-kategori">Akademik</span>
+            <span class="kode-sop">SOP-ISESW-03</span>
+          </div>
+          <h3>Evaluasi Modul & Ujian Kesetaraan</h3>
+          <p style="margin-bottom: 1.5rem;">Ketentuan batas minimal kehadiran 75%, penilaian SKK, pelaksanaan UPK, hingga penerbitan ijazah.</p>
+        </div>
+        <button class="btn btn-kuning" onclick="bukaModal('ujian')">Lihat Detail Prosedur</button>
+      </div>
+
+      <div class="card sop-item" data-kategori="sarpras">
+        <div>
+          <div class="sop-card-top">
+            <span class="badge-kategori">Keuangan & Sarpras</span>
+            <span class="kode-sop">SOP-ISESW-04</span>
+          </div>
+          <h3>Pengelolaan Keuangan & Dana BOP</h3>
+          <p style="margin-bottom: 1.5rem;">Prosedur penyusunan RKAS, pencairan anggaran operasional, bukti transaksi, dan audit keuangan.</p>
+        </div>
+        <button class="btn btn-kuning" onclick="bukaModal('bop')">Lihat Detail Prosedur</button>
+      </div>
+
+      <div class="card sop-item" data-kategori="administrasi">
+        <div>
+          <div class="sop-card-top">
+            <span class="badge-kategori">Administrasi</span>
+            <span class="kode-sop">SOP-ISESW-05</span>
+          </div>
+          <h3>Tata Kelola Data Dapodik</h3>
+          <p style="margin-bottom: 1.5rem;">Prosedur pemutakhiran data warga belajar, validasi NIK/NISN, dan sinkronisasi berkala ke pusat.</p>
+        </div>
+        <button class="btn btn-kuning" onclick="bukaModal('dapodik')">Lihat Detail Prosedur</button>
+      </div>
+
+      <div class="card sop-item" data-kategori="sarpras">
+        <div>
+          <div class="sop-card-top">
+            <span class="badge-kategori">Keuangan & Sarpras</span>
+            <span class="kode-sop">SOP-ISESW-06</span>
+          </div>
+          <h3>Penggunaan & Pemeliharaan Sarpras</h3>
+          <p style="margin-bottom: 1.5rem;">Aturan peminjaman ruang belajar, perawatan perangkat komputer, dan pencatatan inventaris lembaga.</p>
+        </div>
+        <button class="btn btn-kuning" onclick="bukaModal('sarpras')">Lihat Detail Prosedur</button>
+      </div>
+    </div>
+  </section>
+
+  <div class="modal" id="sopModal">
+    <div class="modal-content">
+      <span class="close-modal" onclick="tutupModal()">&times;</span>
+      <span class="kode-sop" id="modalKode">SOP-ISESW</span>
+      <h2 id="modalJudul" style="color: #FFFFFF; margin-top: 0.7rem;">Judul SOP</h2>
+      <p style="color: #38BDF8; font-size: 0.95rem; margin-top: 0.4rem;">Urutan langkah kerja baku yang wajib dijalankan pelaksana:</p>
+      <ol class="modal-list" id="modalLangkah"></ol>
+      <button class="btn btn-kuning" onclick="tutupModal()">Tutup Panduan</button>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-bottom">
+      &copy; 2026 Manajemen SOP PKBM ISESW • Kota Bitung, Sulawesi Utara.
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
